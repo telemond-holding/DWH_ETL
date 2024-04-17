@@ -1,0 +1,997 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/21/2023 1:56:33 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DW"
+  DTS:CreatorName="TELEMOND\ogadm"
+  DTS:DTSID="{AF098C64-A2B1-4856-B051-3097218373D3}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5131.0"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="REP_MasterPackage"
+  DTS:PackageType="5"
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{EDAEF68F-7A05-4EA9-88A6-02CCE239F4F0}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\SC_LoadDataToLEVEL"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{C648E794-1207-4AED-AE59-CFD741F03B31}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SC_LoadDataToLEVEL">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataToLEVEL\EST_InsertCapacityComponents"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{98710f2b-577f-49c6-a9a9-7e7a99814ea5}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertCapacityComponents"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[REP].[ins_CapacityComponents]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataToLEVEL\EST_InsertCapacityCumulated"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{400d4cae-f86b-4945-b1ee-c9e4a2efd5f3}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertCapacityCumulated"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[REP].[ins_CapacityCumulated]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataToLEVEL\EST_InsertCapacityRoutings"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{fdfdaf6d-fbfd-45e6-bd79-e3f16336205d}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertCapacityRoutings"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[REP].[ins_CapacityRoutings]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataToLEVEL\EST_InsertItemQuantity"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{fe02ddcf-e34e-4c84-b410-edc962a9f150}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertItemQuantity"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[REP].[ins_ItemQuantity]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataToLEVEL\EST_InsertLEVEL"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{C754DA2C-555F-4B43-B876-D4EB666BAADB}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertLEVEL"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[REP].[ins_LEVEL1]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataToLEVEL\EST_InsertLEVEL0"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{c4d894b2-ca55-4baf-8ab8-8dfac9d778ad}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertLEVEL0"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[REP].[ins_LEVEL0]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataToLEVEL.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{D82B7320-1CEF-4412-BF5B-612B94A4CB25}"
+          DTS:From="Package\SC_LoadDataToLEVEL\EST_InsertLEVEL"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\SC_LoadDataToLEVEL\EST_InsertLEVEL0" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataToLEVEL.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{6223E37E-B91B-40C5-AC47-758E6D48260E}"
+          DTS:From="Package\SC_LoadDataToLEVEL\EST_InsertLEVEL0"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\SC_LoadDataToLEVEL\EST_InsertItemQuantity" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataToLEVEL.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{08A8BBF0-0285-475E-A78B-0BA8FF007D1C}"
+          DTS:From="Package\SC_LoadDataToLEVEL\EST_InsertItemQuantity"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\SC_LoadDataToLEVEL\EST_InsertCapacityComponents" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataToLEVEL.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{6F8F6687-33C5-4C67-ACF3-C16DA15391AF}"
+          DTS:From="Package\SC_LoadDataToLEVEL\EST_InsertCapacityComponents"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\SC_LoadDataToLEVEL\EST_InsertCapacityRoutings" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataToLEVEL.PrecedenceConstraints[Constraint 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{52D36361-3564-4836-9339-32AA22855897}"
+          DTS:From="Package\SC_LoadDataToLEVEL\EST_InsertCapacityRoutings"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 4"
+          DTS:To="Package\SC_LoadDataToLEVEL\EST_InsertCapacityCumulated" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SC_LoadDataToTabelsREP"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{CCFC6647-9985-4E44-9820-1215EA010C3C}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SC_LoadDataToTabelsREP">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:DTSID="{5FB69911-A1B0-4B39-B5C0-BF19A40D867B}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="Package"
+          DTS:ObjectName="ExecutionID">
+          <DTS:VariableValue
+            DTS:DataType="3">0</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataToTabelsREP\EST_InsertBOM"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{a11f8e2e-fce7-4783-8de7-5ed1e3b512e8}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertBOM"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[REP].[ins_BOM]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataToTabelsREP\EST_InsertBV"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{3597eb22-5e79-456c-b26d-0f918a526bc0}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertBV"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[REP].[ins_BV]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataToTabelsREP\EST_InsertITEM"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{3f93bafe-6711-4605-9558-fbde720396bc}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertITEM"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[REP].[ins_ITEM]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataToTabelsREP\EST_InsertMedianTimeTextItem"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{43CD838D-3005-42EC-8104-47C359D08856}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertMedianTimeTextItem"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[REP].[ins_MedianBurningTimeTextItem]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataToTabelsREP\EST_InsertPRODUCTIONBOMLINE"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{19226e87-cea3-43c4-bb78-eb62458bee67}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertPRODUCTIONBOMLINE"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[REP].[ins_PRODUCTIONBOMLINE]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataToTabelsREP\EST_InsertPRODUCTIONBOMVERSION"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{126D9884-EEFC-41DB-93C1-961E48F0ABAC}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertPRODUCTIONBOMVERSION"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[REP].[ins_PRODUCTIONBOMVERSION]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataToTabelsREP\EST_InsertRL"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{9d00f8b0-1228-4ffb-8ed3-d1b200cff65a}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertRL"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[REP].[ins_RL]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataToTabelsREP\EST_InsertROUTINGLINE"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{c13f8ed1-9394-42f7-b994-ba8fd6a7d0d7}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertROUTINGLINE"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[REP].[ins_ROUTINGLINE]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataToTabelsREP\EST_InsertROUTINGVERSION"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{5d2a3498-a283-4487-80e1-0487c17a91aa}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertROUTINGVERSION"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[REP].[ins_ROUTINGVERSION]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataToTabelsREP\EST_InsertRV"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{2cbc3549-4957-4412-aae8-42a6cb8b3ba4}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertRV"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[REP].[ins_RV]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataToTabelsREP\EST_InsertSALESLINE"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{d4729e43-74e8-4f3a-980e-92094bbb0131}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertSALESLINE"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[REP].[ins_SALESLINE]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataToTabelsREP\EST_InsertSL"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{d4467cd8-5807-41f0-a807-d880aec115a2}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertSL"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[REP].[ins_SL]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataToTabelsREP.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{92AAA918-2129-4098-9684-6FCF73074578}"
+          DTS:From="Package\SC_LoadDataToTabelsREP\EST_InsertSL"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\SC_LoadDataToTabelsREP\EST_InsertMedianTimeTextItem" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataToTabelsREP.PrecedenceConstraints[Constraint 10]"
+          DTS:CreationName=""
+          DTS:DTSID="{3ED82B33-1944-49E6-9649-4A7EC28CCE2E}"
+          DTS:From="Package\SC_LoadDataToTabelsREP\EST_InsertRL"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 10"
+          DTS:To="Package\SC_LoadDataToTabelsREP\EST_InsertSL" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataToTabelsREP.PrecedenceConstraints[Constraint 11]"
+          DTS:CreationName=""
+          DTS:DTSID="{8ABFB85E-B60C-4993-A3CA-38E721687ADD}"
+          DTS:From="Package\SC_LoadDataToTabelsREP\EST_InsertPRODUCTIONBOMVERSION"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 11"
+          DTS:To="Package\SC_LoadDataToTabelsREP\EST_InsertROUTINGVERSION" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataToTabelsREP.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{1A4DD828-D78B-4AE3-8592-B5DEFA2AC6B0}"
+          DTS:From="Package\SC_LoadDataToTabelsREP\EST_InsertPRODUCTIONBOMLINE"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\SC_LoadDataToTabelsREP\EST_InsertPRODUCTIONBOMVERSION" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataToTabelsREP.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{1D4D1D05-1CBE-4D37-962E-DBB5D5DA67F8}"
+          DTS:From="Package\SC_LoadDataToTabelsREP\EST_InsertROUTINGVERSION"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\SC_LoadDataToTabelsREP\EST_InsertROUTINGLINE" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataToTabelsREP.PrecedenceConstraints[Constraint 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{8EC86DEA-27DE-4D12-B315-4B73A4539F1A}"
+          DTS:From="Package\SC_LoadDataToTabelsREP\EST_InsertROUTINGLINE"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 4"
+          DTS:To="Package\SC_LoadDataToTabelsREP\EST_InsertITEM" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataToTabelsREP.PrecedenceConstraints[Constraint 5]"
+          DTS:CreationName=""
+          DTS:DTSID="{48F3EC76-E6DC-4424-8797-DA8FDB1ADDC2}"
+          DTS:From="Package\SC_LoadDataToTabelsREP\EST_InsertITEM"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 5"
+          DTS:To="Package\SC_LoadDataToTabelsREP\EST_InsertSALESLINE" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataToTabelsREP.PrecedenceConstraints[Constraint 6]"
+          DTS:CreationName=""
+          DTS:DTSID="{6D17A711-92EE-4523-8008-87693B8E8828}"
+          DTS:From="Package\SC_LoadDataToTabelsREP\EST_InsertSALESLINE"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 6"
+          DTS:To="Package\SC_LoadDataToTabelsREP\EST_InsertBV" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataToTabelsREP.PrecedenceConstraints[Constraint 7]"
+          DTS:CreationName=""
+          DTS:DTSID="{91B9C607-A27F-4D2D-A8B4-554CB7FC9294}"
+          DTS:From="Package\SC_LoadDataToTabelsREP\EST_InsertBV"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 7"
+          DTS:To="Package\SC_LoadDataToTabelsREP\EST_InsertBOM" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataToTabelsREP.PrecedenceConstraints[Constraint 8]"
+          DTS:CreationName=""
+          DTS:DTSID="{1CD20F22-BEC9-419F-8732-43FCD613C9C1}"
+          DTS:From="Package\SC_LoadDataToTabelsREP\EST_InsertBOM"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 8"
+          DTS:To="Package\SC_LoadDataToTabelsREP\EST_InsertRV" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataToTabelsREP.PrecedenceConstraints[Constraint 9]"
+          DTS:CreationName=""
+          DTS:DTSID="{4202AD8A-7D22-4068-9E26-C6B3A83F3E6B}"
+          DTS:From="Package\SC_LoadDataToTabelsREP\EST_InsertRV"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 9"
+          DTS:To="Package\SC_LoadDataToTabelsREP\EST_InsertRL" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{92E5C1B0-5F82-4C62-9D1B-16EA89D4E67C}"
+      DTS:From="Package\SC_LoadDataToTabelsREP"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\SC_LoadDataToLEVEL" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="229,42"
+          Id="Package\SC_LoadDataToLEVEL\EST_InsertCapacityComponents"
+          TopLeft="5.5,305" />
+        <NodeLayout
+          Size="220,42"
+          Id="Package\SC_LoadDataToLEVEL\EST_InsertCapacityRoutings"
+          TopLeft="17,388.333333333334" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\SC_LoadDataToLEVEL\EST_InsertItemQuantity"
+          TopLeft="18.5,229" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\SC_LoadDataToLEVEL\EST_InsertLEVEL"
+          TopLeft="31.5,29.5" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\SC_LoadDataToLEVEL\EST_InsertLEVEL0"
+          TopLeft="31.5,131.5" />
+        <EdgeLayout
+          Id="Package\SC_LoadDataToLEVEL.PrecedenceConstraints[Constraint]"
+          TopLeft="111.5,71.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataToLEVEL.PrecedenceConstraints[Constraint 1]"
+          TopLeft="113.25,173.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55.5"
+              Start="0,0"
+              End="0,48">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataToLEVEL.PrecedenceConstraints[Constraint 2]"
+          TopLeft="117.5,271">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataToLEVEL.PrecedenceConstraints[Constraint 3]"
+          TopLeft="123.5,347">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.3333333333337"
+              Start="0,0"
+              End="0,33.8333333333337">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.8333333333337" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="221,42"
+          Id="Package\SC_LoadDataToLEVEL\EST_InsertCapacityCumulated"
+          TopLeft="16.5,474.333333333334" />
+        <EdgeLayout
+          Id="Package\SC_LoadDataToLEVEL.PrecedenceConstraints[Constraint 4]"
+          TopLeft="127,430.333333333334">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.9999999999999"
+              Start="0,0"
+              End="0,36.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="240,587"
+          Size="240,630"
+          Id="Package\SC_LoadDataToLEVEL"
+          TopLeft="741,513" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\SC_LoadDataToTabelsREP\EST_InsertBOM"
+          TopLeft="60.5000000000001,719.5" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\SC_LoadDataToTabelsREP\EST_InsertBV"
+          TopLeft="45.5000000000001,617.5" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\SC_LoadDataToTabelsREP\EST_InsertITEM"
+          TopLeft="59.5000000000001,413.5" />
+        <NodeLayout
+          Size="230,42"
+          Id="Package\SC_LoadDataToTabelsREP\EST_InsertMedianTimeTextItem"
+          TopLeft="28,1137" />
+        <NodeLayout
+          Size="263,42"
+          Id="Package\SC_LoadDataToTabelsREP\EST_InsertPRODUCTIONBOMLINE"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="262,42"
+          Id="Package\SC_LoadDataToTabelsREP\EST_InsertPRODUCTIONBOMVERSION"
+          TopLeft="6.00000000000003,107.5" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\SC_LoadDataToTabelsREP\EST_InsertRL"
+          TopLeft="65.5000000000001,923.5" />
+        <NodeLayout
+          Size="242,42"
+          Id="Package\SC_LoadDataToTabelsREP\EST_InsertROUTINGLINE"
+          TopLeft="16.0000000000001,311.5" />
+        <NodeLayout
+          Size="220,42"
+          Id="Package\SC_LoadDataToTabelsREP\EST_InsertROUTINGVERSION"
+          TopLeft="27,209.5" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\SC_LoadDataToTabelsREP\EST_InsertRV"
+          TopLeft="60.5000000000001,821.5" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\SC_LoadDataToTabelsREP\EST_InsertSALESLINE"
+          TopLeft="45.5000000000001,515.5" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\SC_LoadDataToTabelsREP\EST_InsertSL"
+          TopLeft="66.0000000000001,1025.5" />
+        <EdgeLayout
+          Id="Package\SC_LoadDataToTabelsREP.PrecedenceConstraints[Constraint]"
+          TopLeft="140,1067.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,69.5"
+              Start="0,0"
+              End="0,62">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataToTabelsREP.PrecedenceConstraints[Constraint 10]"
+          TopLeft="137,965.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataToTabelsREP.PrecedenceConstraints[Constraint 11]"
+          TopLeft="137,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataToTabelsREP.PrecedenceConstraints[Constraint 2]"
+          TopLeft="137,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataToTabelsREP.PrecedenceConstraints[Constraint 3]"
+          TopLeft="137,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataToTabelsREP.PrecedenceConstraints[Constraint 4]"
+          TopLeft="137,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataToTabelsREP.PrecedenceConstraints[Constraint 5]"
+          TopLeft="137,455.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataToTabelsREP.PrecedenceConstraints[Constraint 6]"
+          TopLeft="137,557.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataToTabelsREP.PrecedenceConstraints[Constraint 7]"
+          TopLeft="137,659.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataToTabelsREP.PrecedenceConstraints[Constraint 8]"
+          TopLeft="137,761.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataToTabelsREP.PrecedenceConstraints[Constraint 9]"
+          TopLeft="137,863.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="282,1523"
+          Size="282,1566"
+          Id="Package\SC_LoadDataToTabelsREP"
+          TopLeft="354,37.3333333333337" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="636,824.166666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="105,0"
+              Start="0,0"
+              End="97.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="97.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,2757 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/21/2023 1:19:07 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DW"
+  DTS:CreatorName="TELEMOND\ogadm"
+  DTS:DTSID="{53A345D2-7FC5-4163-B863-B0AFCB1A9024}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5131.0"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="51"
+  DTS:VersionGUID="{B5EF3EEB-A45A-4BC4-BF4D-F782BEEF9054}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{42ED67D2-51E1-4048-A3D7-C3E4AAC2904E}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SC_LoadDataFromNAV-LIVE_ToSTGA">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractAddAccLedgerEntry"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{D6523739-4A78-44DD-8680-1B730B3492AD}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractAddAccLedgerEntry"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractAddAccLedgerEntry.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractBankAccountLedgerEntry"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{540857c0-b268-4fa0-bffb-a9fafd9bf823}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:MaxErrorCount="5"
+          DTS:ObjectName="EPT_ExtractBankAccountLedgerEntry"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractBankAccountLedgerEntry.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractBonusGroup"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{FDA87291-0309-4F67-860A-1216E77C2EED}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractBonusGroup"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractBonusGroup.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractBonusValue"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{9418A367-1090-4F7D-AA58-D49499992314}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractBonusValue"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractBonusValue.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractDataFromHR"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{0AF28D7E-B880-4B2C-BC24-AA8D4CA0CD8F}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractDataFromHR"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractDataFromHR.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractDimensionValue"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{76A5A36C-49B2-4D68-9243-1D57A93AC604}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractDimensionValue"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractDimensionValue.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractItem"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{308D4F56-17FB-4EE7-A795-1BFD4004F7AD}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:MaxErrorCount="5"
+          DTS:ObjectName="EPT_ExtractItem"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractItem.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractLantekProductionArchive"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{de77e286-8194-4534-b4ca-e886b7ac0817}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractLantekProductionArchive"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractLantekProductionArchive.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractMachineOperator"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{20517CD3-92B1-4283-9E53-3E7218602E5E}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractMachineOperator"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractMachineOperator.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractModel"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{3C7523FF-5815-48E1-AFC9-7CABF215E7FE}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractModel"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractModel.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProdOrderComponent"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{67D1EC76-BF27-464A-B22E-F09156E5E890}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractProdOrderComponent"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractProdOrderComponent.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProdOrderLine"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{0EEF1BD6-6B25-4C8F-B05A-FF7555495018}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractProdOrderLine"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractProdOrderLine.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProdOrderRoutingLine"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{C9033FC4-BA2A-460D-916E-3A6A551ABFAF}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractProdOrderRoutingLine"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractProdOrderRoutingLine.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProductionBOMHeader"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{0099F393-CCDD-4D8C-8767-717D46A9F7CC}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractProductionBOMHeader"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractProductionBOMHeader.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProductionBOMLine"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{FED1CA47-1929-49ED-9DE6-DCBF38CE23C4}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractProductionBOMLine"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractProductionBOMLine.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProductionBOMVersion"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{3F618E75-44E8-4E12-9934-AF44518293F4}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractProductionBOMVersion"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractProductionBOMVersion.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProductionOrder"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{1A8472EE-90C8-45D5-8B41-59D2E6312FD2}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractProductionOrder"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractProductionOrder.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractRoutingHeader"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{a525d15d-6002-4a6d-8d6a-b005835d9a9a}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractRoutingHeader"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractRoutingHeader.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractRoutingLine"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{AA3B56F1-E56A-435E-A1B0-59D9DFF9A24F}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractRoutingLine"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractRoutingLine.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractRoutingVersion"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{B4B70E68-79EC-4F78-BF03-F9C0B20E8F3D}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractRoutingVersion"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractRoutingVersion.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractSalesLine"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{81A2EBC4-3E72-422E-A036-C143A0AECEA0}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractSalesLine"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractSalesLine.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractTechnologyGroup"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{9AC4BE0E-7521-48A7-8C63-006D58D36082}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractTechnologyGroup"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractTechnologyGroup.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractTextItem"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{7b319c1d-cd30-486c-bf4f-0209b865d699}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractTextItem"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractTextItem.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractTextItemRoutingLine"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{c3b1f090-223f-428f-a62d-f98601212d0b}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:MaxErrorCount="5"
+          DTS:ObjectName="EPT_ExtractTextItemRoutingLine"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractTextItemRoutingLine.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractWorkCenter"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{AB9B9408-A4EF-433E-954D-A5040D858E2F}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractWorkCenter"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractWorkCenter.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractWorkCenterGroup"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{720F8E68-DAF6-4A3E-AF18-A30F476EA63D}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractWorkCenterGroup"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractWorkCenterGroup.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{D35D9C40-4A23-4D14-A64B-358BA7768405}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractAddAccLedgerEntry"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractBonusGroup" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{386CFCFA-BE56-4D5A-8827-331903EB8641}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractBonusGroup"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractBonusValue" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 10]"
+          DTS:CreationName=""
+          DTS:DTSID="{6246587B-D336-401C-AAA6-4922E96F1112}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractMachineOperator"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 10"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractModel" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 11]"
+          DTS:CreationName=""
+          DTS:DTSID="{CA44EA63-0C02-4038-87F2-665A04C5F659}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractModel"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 11"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProdOrderComponent" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 12]"
+          DTS:CreationName=""
+          DTS:DTSID="{6C546370-A84F-4E4F-BAC6-0A42EB044096}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProdOrderComponent"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 12"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProdOrderLine" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 13]"
+          DTS:CreationName=""
+          DTS:DTSID="{66A2D580-58B7-4EE3-AA19-DE41A563FFEC}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProdOrderLine"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 13"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProdOrderRoutingLine" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 14]"
+          DTS:CreationName=""
+          DTS:DTSID="{7724FE70-07E4-4A36-930A-BDDFD2DD4A26}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProdOrderRoutingLine"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 14"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProductionBOMHeader" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 15]"
+          DTS:CreationName=""
+          DTS:DTSID="{80886082-E0C6-4E5D-ABF5-1A0BC5CE3DCA}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProductionBOMHeader"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 15"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProductionBOMLine" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 16]"
+          DTS:CreationName=""
+          DTS:DTSID="{C8068BEA-25C5-4DC7-9570-B2ABB664319D}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProductionBOMLine"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 16"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProductionBOMVersion" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 17]"
+          DTS:CreationName=""
+          DTS:DTSID="{8868B3A5-A87E-49CC-A091-0C564621D105}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProductionBOMVersion"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 17"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProductionOrder" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 18]"
+          DTS:CreationName=""
+          DTS:DTSID="{76B4B9AD-A8AE-46D0-A105-9939B62131E6}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProductionOrder"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 18"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractRoutingHeader" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 19]"
+          DTS:CreationName=""
+          DTS:DTSID="{3E974062-52A4-487A-BC11-028FD971B58A}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractRoutingLine"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 19"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractRoutingVersion" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{3B1E6109-BECF-4EF1-A882-9832220D7CC0}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractBonusValue"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractDataFromHR" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 20]"
+          DTS:CreationName=""
+          DTS:DTSID="{5BF5608E-4D55-4EC9-8D74-5EE679431E87}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractRoutingVersion"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 20"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractSalesLine" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 21]"
+          DTS:CreationName=""
+          DTS:DTSID="{A971F49A-D264-4075-ABA6-05B21BE4AA08}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractSalesLine"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 21"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractTechnologyGroup" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 22]"
+          DTS:CreationName=""
+          DTS:DTSID="{A2176DFC-5320-4F8E-8C45-717B869BD1F4}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractWorkCenterGroup"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 22"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractLantekProductionArchive" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 23]"
+          DTS:CreationName=""
+          DTS:DTSID="{DCEAFB70-E32A-4ECA-A14D-ED9668F0302C}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractRoutingHeader"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 23"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractRoutingLine" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 24]"
+          DTS:CreationName=""
+          DTS:DTSID="{AD9D1325-5600-4280-8CE8-4C0F1BFC98F1}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractLantekProductionArchive"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 24"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractBankAccountLedgerEntry" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{BDB5FF08-4DFB-4677-AEEA-87B0B232AA9F}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractItem"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractMachineOperator" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{D3063FA5-D526-4549-985F-D98A46540246}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractDataFromHR"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 4"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractDimensionValue" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 5]"
+          DTS:CreationName=""
+          DTS:DTSID="{A8D13691-E1B1-44C6-B5CB-1E95A0473CBF}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractTechnologyGroup"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 5"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractTextItem" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 6]"
+          DTS:CreationName=""
+          DTS:DTSID="{CF08FA94-54C8-49DD-AB87-CC94CB20CD0D}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractDimensionValue"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 6"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractItem" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 7]"
+          DTS:CreationName=""
+          DTS:DTSID="{60D06FEA-086A-4EF3-8529-720989C54B35}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractTextItem"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 7"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractTextItemRoutingLine" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 8]"
+          DTS:CreationName=""
+          DTS:DTSID="{1BAF6E33-5913-4B22-AEEF-928A7B37408F}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractTextItemRoutingLine"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 8"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractWorkCenter" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 9]"
+          DTS:CreationName=""
+          DTS:DTSID="{98D00683-97EC-4317-BB0C-EEDC555A1682}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractWorkCenter"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 9"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractWorkCenterGroup" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{BF7CE0AF-9336-4513-9377-49EA727E1AFF}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:MaxErrorCount="5"
+      DTS:ObjectName="SC_LoadDataFromNAV-LIVE_ToSTGA_Entry">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EPT_ExtractCapacityLedgerEntry"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:Disabled="True"
+          DTS:DTSID="{4C291A5A-EEAB-42DD-AB6C-91FD3A35398C}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:MaxErrorCount="5"
+          DTS:ObjectName="EPT_ExtractCapacityLedgerEntry"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractCapacityLedgerEntry.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EPT_ExtractDetCofnProdEntry"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{2F77AF8A-142C-4F7F-B22D-116C69A6AE0D}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractDetCofnProdEntry"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractDetCofnProdEntry.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EPT_ExtractItemLedgerEntry"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{03128F11-2B48-450D-B82E-72D036DD2EF6}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractItemLedgerEntry"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractItemLedgerEntry.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EPT_ExtractItermApplicationEntry"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{A41D77D5-2F16-4F76-B5E0-B6E5C573E595}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractItermApplicationEntry"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractItemApplicationEntry.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EST_Insert_CapacityLedgerEntry"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="EST_Insert_CapacityLedgerEntry"
+          DTS:DTSID="{f425be8e-bd15-44bb-b82a-e22150aebd94}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_Insert_CapacityLedgerEntry"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:SqlStatementSource="[STGA].[imp_CapacityLedgerEntry]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EST_Insert_GLEntry"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="EST_Insert_GLEntry"
+          DTS:DTSID="{4ffdbcf3-315c-401c-a4d3-f7bcbb95a581}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_Insert_GLEntry"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:SqlStatementSource="[STGA].[imp_GLEntry]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EST_Insert_GLItemLedgerRelation"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="EST_Insert_GLItemLedgerRelation"
+          DTS:DTSID="{45e6e9fa-ea2e-4841-b571-27228878c15f}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_Insert_GLItemLedgerRelation"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:SqlStatementSource="[STGA].[imp_GLItemLedgerRelation]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EST_Insert_ValueEntry"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="EST_Insert_ValueEntry"
+          DTS:DTSID="{8E48F302-23D7-4E03-A79F-3E14F5690A68}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_Insert_ValueEntry"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:SqlStatementSource="[STGA].[imp_ValueEntry]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{945D61FA-6D9D-4732-82CD-FF99095DD785}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EST_Insert_CapacityLedgerEntry"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EST_Insert_GLItemLedgerRelation" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{FA61D104-17E6-45FD-B10D-EAB8C604408F}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EPT_ExtractItemLedgerEntry"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EST_Insert_ValueEntry" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{03574B90-503E-4547-BF3A-7B1DD2C73975}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EPT_ExtractDetCofnProdEntry"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EPT_ExtractItermApplicationEntry" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{A26048E9-2B88-4AFD-954D-A967AE9554D7}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EPT_ExtractItermApplicationEntry"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EPT_ExtractItemLedgerEntry" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry.PrecedenceConstraints[Constraint 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{7F3229A1-D509-47A5-A2C2-5B35636E826B}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EST_Insert_ValueEntry"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 4"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EST_Insert_GLEntry" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry.PrecedenceConstraints[Constraint 5]"
+          DTS:CreationName=""
+          DTS:DTSID="{7CC2E83E-0CBC-4918-80E2-76ACBFD29A0F}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EST_Insert_GLEntry"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 5"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EST_Insert_CapacityLedgerEntry" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{3EE7E603-2961-4DFD-91F4-AD9878CC5DBF}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SC_LoadDataFromNAV-LIVE_ToSTGA_Sales">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales\EPT_ExtractCustomer"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{243b5e64-9d2c-4217-b6ab-107e03286f43}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractCustomer"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractCustomer.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales\EPT_ExtractPurchaseHeader"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{48378609-10dd-404f-92eb-69daad66bc0a}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractPurchaseHeader"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractPurchaseHeader.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales\EPT_ExtractPurchRcptHeader"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{261d0021-bdbd-40e3-90e5-e3ecece877f0}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractPurchRcptHeader"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractPurchRcptHeader.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales\EPT_ExtractSalesHeader"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{e582ef23-c7ef-488f-9501-bfdc337d846c}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractSalesHeader"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractSalesHeader.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales\EPT_ExtractVendor"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{afe61cd0-bf38-4078-80ec-c4368ba5c150}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractVendor"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractVendor.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{75DA37E5-45CB-43C6-8FF8-10654A511CDF}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales\EPT_ExtractCustomer"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales\EPT_ExtractVendor" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{40A50C3C-8C10-4E59-9469-91D87DAE1D82}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales\EPT_ExtractVendor"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales\EPT_ExtractSalesHeader" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{3D6F9639-56A0-4AE9-8B7F-359C615FAAFD}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales\EPT_ExtractSalesHeader"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales\EPT_ExtractPurchRcptHeader" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{636572B9-1082-45BD-A8E6-3C44641415D7}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales\EPT_ExtractPurchRcptHeader"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales\EPT_ExtractPurchaseHeader" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="SC_LoadDataFromQueris_ToSTGA"
+      DTS:DTSID="{6BB27333-84FA-49D5-976E-A48D648E7B02}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SC_LoadDataFromQueris_ToSTGA">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA\EPT_EctractDimDates"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="EPT_EctractDimDates"
+          DTS:DTSID="{FD9AD022-DEBF-4E3F-8631-D5589D96A416}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_EctractDimDates"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractDimDates.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimItems"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="EPT_ExtractDimItems"
+          DTS:DTSID="{AC201B77-749C-44B7-8AF3-74B54BC374C5}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractDimItems"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractDimItems.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimOperations"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="EPT_ExtractDimOperations"
+          DTS:DTSID="{B4290A56-C183-4E10-83B6-E9813C7DD5DD}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractDimOperations"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractDimOperations.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimOrders"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="EPT_ExtractDimOrders"
+          DTS:DTSID="{EA535049-F132-4C2B-B235-5D7750CAA294}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractDimOrders"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractDimOrders.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimResources"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="EPT_ExtractDimResources"
+          DTS:DTSID="{30C9332B-90AB-403F-A7BA-33B8E007206E}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractDimResources"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractDimResources.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimShifts"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="EPT_ExtractDimShifts"
+          DTS:DTSID="{92383EB4-10C5-4B99-891D-A02E14E0734B}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractDimShifts"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractDimShifts.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimSquads"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="EPT_ExtractDimSquads"
+          DTS:DTSID="{D154CD67-1C1A-4906-A73D-4D2DDE973DDD}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractDimSquads"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractDimSquads.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimSquadWorkTimes"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="EPT_ExtractDimSquadWorkTimes"
+          DTS:DTSID="{C7FDB74C-C2AE-4B1F-80E6-F3684112B625}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractDimSquadWorkTimes"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractDimSquadWorkTimes.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimTasks"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="EPT_ExtractDimTasks"
+          DTS:DTSID="{8DF65690-088E-40AD-B6A3-0B0D40F35DFF}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractDimTasks"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractDimTasks.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimUnits"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="EPT_ExtractDimUnits"
+          DTS:DTSID="{AE123752-0090-4766-BFF9-B4DE30C39C91}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractDimUnits"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractDimUnits.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimUsers"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="EPT_ExtractDimUsers"
+          DTS:DTSID="{4799C143-BF12-4FF0-BEFA-248D74943C28}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractDimUsers"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractDimUsers.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractFactProductionOnMachines"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="EPT_ExtractFactProductionOnMachines"
+          DTS:DTSID="{75B09F0A-9E22-4FAA-BB7D-FB4D79CA5AF1}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractFactProductionOnMachines"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractFactProductionOnMachines.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractFactTasksDoneByUser"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="EPT_ExtractFactTasksDoneByUser"
+          DTS:DTSID="{84D9B710-13EA-433E-A790-C7691ED71C75}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_ExtractFactTasksDoneByUser"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STGA_ExtractFactTasksDoneByUser.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{4B623668-85EA-4AAC-9E05-E4D819EFAA07}"
+          DTS:From="Package\SC_LoadDataFromQueris_ToSTGA\EPT_EctractDimDates"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimUnits" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{470472E5-6E01-4DE3-8FDE-71A34F2CFCAF}"
+          DTS:From="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimUnits"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimShifts" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint 10]"
+          DTS:CreationName=""
+          DTS:DTSID="{40243BAA-E13A-467D-9524-9E2D0DE8A2A9}"
+          DTS:From="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimOrders"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 10"
+          DTS:To="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractFactProductionOnMachines" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint 11]"
+          DTS:CreationName=""
+          DTS:DTSID="{EA395BA1-76EC-4C1A-A9B1-48EA1CDBC364}"
+          DTS:From="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractFactProductionOnMachines"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 11"
+          DTS:To="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractFactTasksDoneByUser" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{E4A87809-36D8-4840-9E52-0CFDC7B814A7}"
+          DTS:From="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimShifts"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimSquadWorkTimes" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{5FB7A469-B1F3-49B4-8870-E6EF99DB8931}"
+          DTS:From="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimSquadWorkTimes"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimSquads" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{13F96D44-C9E7-418E-9F39-05C53EF0B7F9}"
+          DTS:From="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimSquads"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 4"
+          DTS:To="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimUsers" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint 5]"
+          DTS:CreationName=""
+          DTS:DTSID="{A204A889-01FF-4455-B616-389C7D11BB48}"
+          DTS:From="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimUsers"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 5"
+          DTS:To="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimTasks" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint 6]"
+          DTS:CreationName=""
+          DTS:DTSID="{E7596393-CFA9-40AB-A437-B133A90982F5}"
+          DTS:From="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimTasks"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 6"
+          DTS:To="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimItems" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint 7]"
+          DTS:CreationName=""
+          DTS:DTSID="{12136BF8-1BF8-44C6-892D-FD321D7A27DB}"
+          DTS:From="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimItems"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 7"
+          DTS:To="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimResources" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint 8]"
+          DTS:CreationName=""
+          DTS:DTSID="{E5295A9A-ABB6-4122-B925-7F18944AAE33}"
+          DTS:From="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimResources"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 8"
+          DTS:To="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimOperations" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint 9]"
+          DTS:CreationName=""
+          DTS:DTSID="{E2206F84-B01E-4E2D-A2C0-EBA72107B485}"
+          DTS:From="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimOperations"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 9"
+          DTS:To="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimOrders" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{B556C577-3A8D-4D20-8206-047EFED292CA}"
+      DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{097A30F1-860F-43BD-8FBD-E8275E81591A}"
+      DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{D48DD608-F42C-483A-984D-8894A14F5A61}"
+      DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\SC_LoadDataFromQueris_ToSTGA" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="227,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractAddAccLedgerEntry"
+          TopLeft="20,5.5" />
+        <NodeLayout
+          Size="253,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractBankAccountLedgerEntry"
+          TopLeft="7.00000000000031,2555.5" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractBonusGroup"
+          TopLeft="37,107.5" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractBonusValue"
+          TopLeft="38.5,209.5" />
+        <NodeLayout
+          Size="196,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractDataFromHR"
+          TopLeft="35.5,311.5" />
+        <NodeLayout
+          Size="211,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractDimensionValue"
+          TopLeft="28.0000000000001,413.5" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractItem"
+          TopLeft="54.5000000000001,515.5" />
+        <NodeLayout
+          Size="252,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractLantekProductionArchive"
+          TopLeft="7.50000000000028,2453.5" />
+        <NodeLayout
+          Size="216,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractMachineOperator"
+          TopLeft="25.5000000000001,617.5" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractModel"
+          TopLeft="51.5000000000001,719.5" />
+        <NodeLayout
+          Size="256,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProdOrderComponent"
+          TopLeft="5.50000000000009,821.5" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProdOrderLine"
+          TopLeft="32.0000000000001,923.5" />
+        <NodeLayout
+          Size="239,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProdOrderRoutingLine"
+          TopLeft="14.0000000000001,1025.5" />
+        <NodeLayout
+          Size="250,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProductionBOMHeader"
+          TopLeft="8.50000000000014,1127.5" />
+        <NodeLayout
+          Size="227,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProductionBOMLine"
+          TopLeft="20.0000000000001,1229.5" />
+        <NodeLayout
+          Size="252,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProductionBOMVersion"
+          TopLeft="7.50000000000014,1331.5" />
+        <NodeLayout
+          Size="212,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractProductionOrder"
+          TopLeft="27.5000000000002,1433.5" />
+        <NodeLayout
+          Size="252,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractRoutingHeader"
+          TopLeft="7.50000000000017,1535.5" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractRoutingLine"
+          TopLeft="38.0000000000002,1637.5" />
+        <NodeLayout
+          Size="207,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractRoutingVersion"
+          TopLeft="30.0000000000002,1739.5" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractSalesLine"
+          TopLeft="44.0000000000002,1841.5" />
+        <NodeLayout
+          Size="218,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractTechnologyGroup"
+          TopLeft="24.5000000000002,1943.5" />
+        <NodeLayout
+          Size="220,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractTextItem"
+          TopLeft="23.5000000000003,2045.5" />
+        <NodeLayout
+          Size="236,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractTextItemRoutingLine"
+          TopLeft="15.5000000000003,2147.5" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractWorkCenter"
+          TopLeft="38.0000000000003,2249.5" />
+        <NodeLayout
+          Size="220,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA\EPT_ExtractWorkCenterGroup"
+          TopLeft="23.5000000000003,2351.5" />
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint]"
+          TopLeft="133.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 1]"
+          TopLeft="133.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 10]"
+          TopLeft="133.5,659.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 11]"
+          TopLeft="133.5,761.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 12]"
+          TopLeft="133.5,863.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 13]"
+          TopLeft="133.5,965.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 14]"
+          TopLeft="133.5,1067.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 15]"
+          TopLeft="133.5,1169.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 16]"
+          TopLeft="133.5,1271.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 17]"
+          TopLeft="133.5,1373.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 18]"
+          TopLeft="133.5,1475.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 19]"
+          TopLeft="133.5,1679.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 2]"
+          TopLeft="133.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 20]"
+          TopLeft="133.5,1781.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 21]"
+          TopLeft="133.5,1883.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 22]"
+          TopLeft="133.5,2393.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 23]"
+          TopLeft="133.5,1577.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 24]"
+          TopLeft="133.5,2495.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 3]"
+          TopLeft="133.5,557.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 4]"
+          TopLeft="133.5,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 5]"
+          TopLeft="133.5,1985.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 6]"
+          TopLeft="133.5,455.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 7]"
+          TopLeft="133.5,2087.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 8]"
+          TopLeft="133.5,2189.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA.PrecedenceConstraints[Constraint 9]"
+          TopLeft="133.5,2291.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="267,2653"
+          Size="267,2696"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA"
+          TopLeft="144,22.5" />
+        <NodeLayout
+          Size="232,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EPT_ExtractCapacityLedgerEntry"
+          TopLeft="14.5000000000001,722.5" />
+        <NodeLayout
+          Size="230,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EPT_ExtractDetCofnProdEntry"
+          TopLeft="23.5,9.5" />
+        <NodeLayout
+          Size="215,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EPT_ExtractItemLedgerEntry"
+          TopLeft="31,213.5" />
+        <NodeLayout
+          Size="238,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EPT_ExtractItermApplicationEntry"
+          TopLeft="19.5,111.5" />
+        <NodeLayout
+          Size="233,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EST_Insert_CapacityLedgerEntry"
+          TopLeft="22.0000000000001,519.5" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EST_Insert_GLEntry"
+          TopLeft="51.5,417.5" />
+        <NodeLayout
+          Size="241,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EST_Insert_GLItemLedgerRelation"
+          TopLeft="18.0000000000001,621.5" />
+        <NodeLayout
+          Size="187,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry\EST_Insert_ValueEntry"
+          TopLeft="45,315.5" />
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry.PrecedenceConstraints[Constraint]"
+          TopLeft="138.5,561.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry.PrecedenceConstraints[Constraint 1]"
+          TopLeft="138.5,255.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry.PrecedenceConstraints[Constraint 2]"
+          TopLeft="138.5,51.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry.PrecedenceConstraints[Constraint 3]"
+          TopLeft="138.5,153.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry.PrecedenceConstraints[Constraint 4]"
+          TopLeft="138.5,357.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry.PrecedenceConstraints[Constraint 5]"
+          TopLeft="138.5,459.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="302,815"
+          Size="302,858"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Entry"
+          TopLeft="475,22.5" />
+        <NodeLayout
+          Size="181,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales\EPT_ExtractCustomer"
+          TopLeft="30,5.5" />
+        <NodeLayout
+          Size="212,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales\EPT_ExtractPurchaseHeader"
+          TopLeft="14.5,413.5" />
+        <NodeLayout
+          Size="230,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales\EPT_ExtractPurchRcptHeader"
+          TopLeft="5.50000000000004,311.5" />
+        <NodeLayout
+          Size="194,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales\EPT_ExtractSalesHeader"
+          TopLeft="23.5,209.5" />
+        <NodeLayout
+          Size="169,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales\EPT_ExtractVendor"
+          TopLeft="36,107.5" />
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales.PrecedenceConstraints[Constraint]"
+          TopLeft="120.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales.PrecedenceConstraints[Constraint 1]"
+          TopLeft="120.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales.PrecedenceConstraints[Constraint 2]"
+          TopLeft="120.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales.PrecedenceConstraints[Constraint 3]"
+          TopLeft="120.5,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="241,511"
+          Size="241,554"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGA_Sales"
+          TopLeft="814,22.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="411,1370.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="63.9999999999999,-919"
+              Start="0,0"
+              End="56.4999999999999,-919">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="27.9999999999999,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="27.9999999999999,0"
+                    Point2="31.9999999999999,0"
+                    Point3="31.9999999999999,-4" />
+                  <mssgle:LineSegment
+                    End="31.9999999999999,-915" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31.9999999999999,-915"
+                    Point2="31.9999999999999,-919"
+                    Point3="35.9999999999999,-919" />
+                  <mssgle:LineSegment
+                    End="56.4999999999999,-919" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="777,451.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="37.0000000000003,-152"
+              Start="0,0"
+              End="29.5000000000003,-152">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="14.5000000000002,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="14.5000000000002,0"
+                    Point2="18.5000000000002,0"
+                    Point3="18.5000000000002,-4" />
+                  <mssgle:LineSegment
+                    End="18.5000000000002,-148" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5000000000002,-148"
+                    Point2="18.5000000000002,-152"
+                    Point3="22.5000000000002,-152" />
+                  <mssgle:LineSegment
+                    End="29.5000000000003,-152" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="262,42"
+          Id="Package\SC_LoadDataFromQueris_ToSTGA\EPT_EctractDimDates"
+          TopLeft="47.5384615384614,11" />
+        <NodeLayout
+          Size="262,42"
+          Id="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimUnits"
+          TopLeft="47.5384615384614,95" />
+        <NodeLayout
+          Size="262,42"
+          Id="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimShifts"
+          TopLeft="47.5384615384614,179" />
+        <NodeLayout
+          Size="262,42"
+          Id="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimSquadWorkTimes"
+          TopLeft="47.5384615384614,263" />
+        <NodeLayout
+          Size="262,42"
+          Id="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimSquads"
+          TopLeft="47.5384615384614,347" />
+        <NodeLayout
+          Size="262,42"
+          Id="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimUsers"
+          TopLeft="47.5384615384614,431" />
+        <NodeLayout
+          Size="262,42"
+          Id="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimTasks"
+          TopLeft="47.5384615384614,515" />
+        <NodeLayout
+          Size="262,42"
+          Id="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimItems"
+          TopLeft="47.5384615384614,599" />
+        <NodeLayout
+          Size="262,42"
+          Id="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimResources"
+          TopLeft="47.5384615384614,683" />
+        <NodeLayout
+          Size="262,42"
+          Id="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimOperations"
+          TopLeft="47.5384615384614,767" />
+        <NodeLayout
+          Size="262,42"
+          Id="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractDimOrders"
+          TopLeft="47.5384615384614,851" />
+        <NodeLayout
+          Size="262,42"
+          Id="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractFactProductionOnMachines"
+          TopLeft="47.5384615384614,935" />
+        <NodeLayout
+          Size="262,42"
+          Id="Package\SC_LoadDataFromQueris_ToSTGA\EPT_ExtractFactTasksDoneByUser"
+          TopLeft="47.5384615384614,1019" />
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint]"
+          TopLeft="178.538461538461,53">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint 1]"
+          TopLeft="178.538461538461,137">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint 2]"
+          TopLeft="178.538461538461,221">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint 3]"
+          TopLeft="178.538461538461,305">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint 4]"
+          TopLeft="178.538461538461,389">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint 5]"
+          TopLeft="178.538461538461,473">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint 6]"
+          TopLeft="178.538461538461,557">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint 7]"
+          TopLeft="178.538461538461,641">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint 8]"
+          TopLeft="178.538461538461,725">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint 9]"
+          TopLeft="178.538461538461,809">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint 10]"
+          TopLeft="178.538461538461,893">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromQueris_ToSTGA.PrecedenceConstraints[Constraint 11]"
+          TopLeft="178.538461538461,977">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="350,1116"
+          Size="350,1159"
+          Id="Package\SC_LoadDataFromQueris_ToSTGA"
+          TopLeft="1121,26" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="1055,299.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="65.9999999999995,306"
+              Start="0,0"
+              End="58.4999999999995,306">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="28.9999999999998,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="28.9999999999998,0"
+                    Point2="32.9999999999998,0"
+                    Point3="32.9999999999998,4" />
+                  <mssgle:LineSegment
+                    End="32.9999999999998,302" />
+                  <mssgle:CubicBezierSegment
+                    Point1="32.9999999999998,302"
+                    Point2="32.9999999999998,306"
+                    Point3="36.9999999999998,306" />
+                  <mssgle:LineSegment
+                    End="58.4999999999995,306" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

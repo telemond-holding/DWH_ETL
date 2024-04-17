@@ -1,0 +1,2437 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/21/2023 1:56:33 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DW"
+  DTS:CreatorName="TELEMOND\ogadm"
+  DTS:DTSID="{7807D98E-50DD-4438-B1F2-1F9BFBDA1E2D}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5131.0"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="40"
+  DTS:VersionGUID="{B9E93C70-E6D4-4550-B71B-0604EED35DF5}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="20"
+      DTS:DTSID="{46661C90-711F-47B5-AA73-88695FE404B6}"
+      DTS:ObjectName="ExecutionID"
+      DTS:Required="True">
+      <DTS:Property
+        DTS:DataType="20"
+        DTS:Name="ParameterValue">0</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{28B8D78F-F214-410A-9FDF-DAE55C008AA8}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SC_LoadDataFromNAV-LIVE_Sales_ToSTGB">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB\EST_InsertCustomer"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{42b3e237-03d2-4a34-95f5-d2ea293fe6b9}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:MaxErrorCount="4"
+          DTS:ObjectName="EST_InsertCustomer"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_Customer] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB\EST_InsertPurchaseHeader"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{c6f275cf-2c7f-4e31-9203-868124b1c702}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:MaxErrorCount="4"
+          DTS:ObjectName="EST_InsertPurchaseHeader"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_PurchaseHeader] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB\EST_InsertPurchRcptHeader"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{a3948ae2-c83a-4508-b56c-391872d2b7b8}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:MaxErrorCount="4"
+          DTS:ObjectName="EST_InsertPurchRcptHeader"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_PurchRcptHeader] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB\EST_InsertSalesHeader"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{52627ee2-93c7-4b69-97bb-5cef4e16bcc0}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:MaxErrorCount="4"
+          DTS:ObjectName="EST_InsertSalesHeader"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_SalesHeader] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB\EST_InsertVendor"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{f1416423-61c1-4d10-b506-fbada3b0d92c}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:MaxErrorCount="4"
+          DTS:ObjectName="EST_InsertVendor"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_Vendor] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{ADC0F9FC-695E-46F8-9E28-959779705953}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB\EST_InsertCustomer"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB\EST_InsertVendor" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{83A6FB8E-2063-42AB-B41F-705916BE00A8}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB\EST_InsertVendor"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB\EST_InsertSalesHeader" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{C9A9EB17-506E-4051-9157-94F2BF22465C}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB\EST_InsertSalesHeader"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB\EST_InsertPurchRcptHeader" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{4E540810-2424-435B-9466-922470FBD7C8}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB\EST_InsertPurchRcptHeader"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB\EST_InsertPurchaseHeader" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SC_LoadDataFromNAV-LIVE_TextItem_ToSTGB"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{46ECCA54-358C-4A8E-923F-096A1C55837F}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SC_LoadDataFromNAV-LIVE_TextItem_ToSTGB">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_TextItem_ToSTGB\EST_InsertLantekProductionArchive"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{c272dcb0-70eb-4f14-864b-a5921fa640d0}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertLantekProductionArchive"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_LantekProductionArchive] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_TextItem_ToSTGB\EST_InsertTextItem"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{53579f6f-9e2d-4f83-959a-33b9e1b3eb56}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertTextItem"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_TextItem] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_TextItem_ToSTGB\EST_InsertTextItemRoutingLine"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{fc1c2c2b-0cbd-4d94-ac76-3d2cbb65b1aa}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertTextItemRoutingLine"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_TextITemRoutingLine] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_TextItem_ToSTGB.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{1CADB4FE-8BC5-4A77-87B7-E374E6FEAFF5}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_TextItem_ToSTGB\EST_InsertTextItem"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_TextItem_ToSTGB\EST_InsertTextItemRoutingLine" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_TextItem_ToSTGB.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{863784D1-8743-4505-91B5-E91DCF644D07}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_TextItem_ToSTGB\EST_InsertTextItemRoutingLine"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_TextItem_ToSTGB\EST_InsertLantekProductionArchive" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{38914C1C-C963-42D9-934C-B2190D8F23AB}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SC_LoadDataFromNAV-LIVE_ToSTGB">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:DTSID="{C2FD723C-BB8C-483E-AE9B-FA52BE726F97}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="Package"
+          DTS:ObjectName="ExecutionID">
+          <DTS:VariableValue
+            DTS:DataType="3">0</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertAddAccLedgerEntry"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{447823B5-2458-490E-A8E2-635EF373EE52}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:MaxErrorCount="4"
+          DTS:ObjectName="EST_InsertAddAccLedgerEntry"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_AddAccLedgerEntry] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertBankAccountLedgerEntry"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{6396db74-2f94-4656-a620-b06ede7d7ff6}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertBankAccountLedgerEntry"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_BankAccountLedgerEntry] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertBonusGroup"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{B045B515-DBFF-4746-AFDE-87529817B083}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertBonusGroup"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_BonusGroup] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertBonusValue"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{8F15EF4A-6183-4935-81E6-98C103A33778}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertBonusValue"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_BonusValue] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertCapacityLedgerEntry"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{1055cafd-79a1-4f36-8eb5-f2abe10a3838}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertCapacityLedgerEntry"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_CapacityLedgerEntry] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertDataFromHR"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{a8063d95-0875-42ea-b6d0-ec7642cc3c7f}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertDataFromHR"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_DataFromHR] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertDetCofnProdEntry"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{6F172B2F-664C-4461-8089-EB434A92E4EF}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertDetCofnProdEntry"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_DetCofnProdEntry] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertDimensionValue"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{4ea75ae2-8bd5-4b0a-8a09-d0cf671ca87e}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertDimensionValue"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_DimensionValue] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertFactRealTimeDeviation"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{33130dc8-2562-4978-b9fa-b51aec7c055c}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertFactRealTimeDeviation"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_FactRealTimeDeviation] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertGLEntry"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{05b2094d-653c-4a6a-a983-6f01d738b6ce}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertGLEntry"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_GLEntry] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertGLItemLedgerRelation"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{fc4f7f71-fd0f-44d6-8505-9808be78de8f}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertGLItemLedgerRelation"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_GLItemLedgerRelation] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertItem"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{99dd211d-592d-4763-bae8-92baa91eae9d}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertItem"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_Item] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertItemApplicationEntry"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{a4c694ac-0718-49bc-9d01-f9f49911961e}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertItemApplicationEntry"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_ItemApplicationEntry] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertItemLedgerEntry"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{4b4cba3e-07fb-41cb-be4c-38760b9a6a34}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertItemLedgerEntry"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_ItemLedgerEntry] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertMachineOperator"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{a60ceff0-e075-474d-93e2-2d066a8ce4f4}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertMachineOperator"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_MachineOperator] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertModel"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{80516118-2c4e-4796-8c73-50edb2b1b9be}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertModel"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_Model] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProdOrderComponent"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{b19ab549-ded0-4928-8e01-a657e8140778}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertProdOrderComponent"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_ProdOrderComponent] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProdOrderLine"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{e5141aed-e812-422b-92eb-18171d274c70}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertProdOrderLine"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_ProdOrderLine] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProdOrderRoutingLine"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{77328ead-1bb8-4bb1-819e-c7464f5cee20}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertProdOrderRoutingLine"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_ProdOrderRoutingLine] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProductionBOMHeader"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{68DC56F0-2A6D-4541-8179-A0902995D925}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertProductionBOMHeader"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_ProductionBOMHeader] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProductionBOMLine"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{9D8C4EC3-2853-447A-85CB-1BE1AE6774D8}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertProductionBOMLine"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_ProductionBOMLine] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProductionBOMVersion"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{7C2ECC80-5DF7-487C-985C-83039BFF3725}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertProductionBOMVersion"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_ProductionBOMVersion] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProductionOrder"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{54631578-F43B-4F7B-9641-C41C3C7616CA}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertProductionOrder"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_ProductionOrder] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertRoutingHeader"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{67d79388-5eff-43f3-a3fb-4481ec98f27e}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertRoutingHeader"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_RoutingHeader] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertRoutingLine"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{74B1F1D3-D67C-489D-AA51-4C6F700EF7C2}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertRoutingLine"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_RoutingLine] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertRoutingVersion"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{EEC71677-941B-47D4-875B-247A5B3E65BB}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertRoutingVersion"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_RoutingVersion] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertSalesLine"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{F0908330-1D4A-472C-90DB-85FC9C106F6F}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertSalesLine"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_SalesLine] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertTechnologyGroup"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{DB0D09E5-88BD-4EA7-97DC-7C0819130238}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertTechnologyGroup"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_TechnologyGroup] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertValueEntry"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{C76A90B8-D27A-4C12-8C1E-832E1929BA63}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertValueEntry"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_ValueEntry] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertWorkCenter"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{EB9FB940-5E2C-48B2-9E40-278460FBC8E5}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertWorkCenter"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_WorkCenter] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertWorkCenterGroup"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{E1CAF3C6-5D60-444D-92C8-CCEEA6B51FBC}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_InsertWorkCenterGroup"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5C3AEF10-47EC-4D2D-9EAD-B0E2934DB338}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="[STGB].[ins_WorkCenterGroup] ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="$Package::ExecutionID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{384D3113-5E36-4FEA-9D29-EECF6DAA12A7}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertAddAccLedgerEntry"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertBonusGroup" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{0AD084F3-63AA-4862-8D71-1B38DADD0472}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertBonusGroup"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertBonusValue" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 10]"
+          DTS:CreationName=""
+          DTS:DTSID="{CBE36BC6-3EC8-4076-B559-9083D19CD69F}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertMachineOperator"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 10"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertModel" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 11]"
+          DTS:CreationName=""
+          DTS:DTSID="{16BC6AFC-F5D9-4C99-9A25-2920499A8CAE}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertModel"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 11"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProdOrderComponent" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 12]"
+          DTS:CreationName=""
+          DTS:DTSID="{BC680C58-12D6-48F3-AEF7-633F2CC28B90}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProdOrderComponent"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 12"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProdOrderLine" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 13]"
+          DTS:CreationName=""
+          DTS:DTSID="{9B20EB8E-C4DD-4F6B-BA58-221FF2E5DB78}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProdOrderLine"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 13"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProdOrderRoutingLine" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 14]"
+          DTS:CreationName=""
+          DTS:DTSID="{0EA14BC1-D4F2-4539-BB91-C74E8EE5E6EE}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProdOrderRoutingLine"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 14"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProductionBOMHeader" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 15]"
+          DTS:CreationName=""
+          DTS:DTSID="{C6A3AD05-FF19-4432-BA92-F814BEB6E22C}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProductionBOMHeader"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 15"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProductionBOMLine" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 16]"
+          DTS:CreationName=""
+          DTS:DTSID="{88AB6858-42F2-4692-B157-68AD6BE7CE46}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProductionBOMLine"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 16"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProductionBOMVersion" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 17]"
+          DTS:CreationName=""
+          DTS:DTSID="{55E391CC-A0E5-4D0D-9651-E720F489C62B}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProductionBOMVersion"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 17"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProductionOrder" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 18]"
+          DTS:CreationName=""
+          DTS:DTSID="{20C5CAEB-2D72-4EC7-A5E2-C75E4F0A1D81}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProductionOrder"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 18"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertRoutingHeader" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 19]"
+          DTS:CreationName=""
+          DTS:DTSID="{8B7947FC-15C8-41BF-B748-5454448D2338}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertRoutingLine"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 19"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertRoutingVersion" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{C8DCBBD4-490D-4481-8F2C-C4E54953A9C8}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertBonusValue"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertCapacityLedgerEntry" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 20]"
+          DTS:CreationName=""
+          DTS:DTSID="{4B8C5F19-5D9B-4EE8-84C3-5566659C7F89}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertRoutingVersion"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 20"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertSalesLine" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 21]"
+          DTS:CreationName=""
+          DTS:DTSID="{8B1B138B-D0E7-4904-8C24-ED91ECAE7405}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertSalesLine"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 21"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertTechnologyGroup" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 22]"
+          DTS:CreationName=""
+          DTS:DTSID="{B861749C-5798-4DE6-AE4C-F348FBAF3701}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertTechnologyGroup"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 22"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertValueEntry" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 23]"
+          DTS:CreationName=""
+          DTS:DTSID="{D499139C-46CB-4B26-891F-C8FF94ACADA6}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertValueEntry"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 23"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertWorkCenter" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 24]"
+          DTS:CreationName=""
+          DTS:DTSID="{17AF932E-5709-48BC-BB70-6BE8E5677A09}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertWorkCenter"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 24"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertWorkCenterGroup" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 25]"
+          DTS:CreationName=""
+          DTS:DTSID="{DC39E168-D389-4584-91DE-51DF17DB0C5E}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertWorkCenterGroup"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 25"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertFactRealTimeDeviation" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 26]"
+          DTS:CreationName=""
+          DTS:DTSID="{31DA0357-8A22-47BF-84F4-F14C44353783}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertRoutingHeader"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 26"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertRoutingLine" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 27]"
+          DTS:CreationName=""
+          DTS:DTSID="{50BB64B9-DB85-432F-9E30-F4735F83A195}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertFactRealTimeDeviation"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 27"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertGLEntry" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 28]"
+          DTS:CreationName=""
+          DTS:DTSID="{116565CC-09E8-4B90-B9A0-EA583129175E}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertGLEntry"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 28"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertGLItemLedgerRelation" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 29]"
+          DTS:CreationName=""
+          DTS:DTSID="{94C18238-4BBB-4F50-B8AF-FD577280BD51}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertGLItemLedgerRelation"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 29"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertBankAccountLedgerEntry" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{A059A4F4-CA41-43F7-9889-C041AE08CF72}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertCapacityLedgerEntry"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertDataFromHR" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{0F381D8E-D8A9-4340-B1F3-DD6D939A615A}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertDataFromHR"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 4"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertDetCofnProdEntry" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 5]"
+          DTS:CreationName=""
+          DTS:DTSID="{AFF205E2-61F1-47E3-9814-0105B732BB93}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertDetCofnProdEntry"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 5"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertDimensionValue" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 6]"
+          DTS:CreationName=""
+          DTS:DTSID="{8282F371-C265-4132-A736-9C86FBE1CACC}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertDimensionValue"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 6"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertItem" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 7]"
+          DTS:CreationName=""
+          DTS:DTSID="{1C78D768-9CDC-427E-9511-017EC26323ED}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertItem"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 7"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertItemApplicationEntry" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 8]"
+          DTS:CreationName=""
+          DTS:DTSID="{678DB2C0-34AF-4E32-A1CD-27C89944C714}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertItemApplicationEntry"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 8"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertItemLedgerEntry" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 9]"
+          DTS:CreationName=""
+          DTS:DTSID="{4AAE87BD-B5BE-460B-8CF3-5D10DD747798}"
+          DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertItemLedgerEntry"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 9"
+          DTS:To="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertMachineOperator" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{A99733AD-1D91-4018-9D0C-EB236B98248B}"
+      DTS:From="Package\SC_LoadDataFromNAV-LIVE_ToSTGB"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\SC_LoadDataFromNAV-LIVE_TextItem_ToSTGB" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{E0023B71-9B0F-40FC-900A-7D0CFDEC145A}"
+      DTS:From="Package\SC_LoadDataFromNAV-LIVE_TextItem_ToSTGB"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="176,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB\EST_InsertCustomer"
+          TopLeft="46.0000000000002,30.75" />
+        <NodeLayout
+          Size="212,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB\EST_InsertPurchaseHeader"
+          TopLeft="36,375" />
+        <NodeLayout
+          Size="212,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB\EST_InsertPurchRcptHeader"
+          TopLeft="32,299" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB\EST_InsertSalesHeader"
+          TopLeft="40,205" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB\EST_InsertVendor"
+          TopLeft="54.7500000000002,116.5" />
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB.PrecedenceConstraints[Constraint]"
+          TopLeft="135.375,72.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.75"
+              Start="0,0"
+              End="0,36.25">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.25" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB.PrecedenceConstraints[Constraint 1]"
+          TopLeft="135.625,158.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.5"
+              Start="0,0"
+              End="0,39">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB.PrecedenceConstraints[Constraint 2]"
+          TopLeft="136.25,247">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52"
+              Start="0,0"
+              End="0,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB.PrecedenceConstraints[Constraint 3]"
+          TopLeft="140,341">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="282,472"
+          Size="282,515"
+          Id="Package\SC_LoadDataFromNAV-LIVE_Sales_ToSTGB"
+          TopLeft="1131.25,64.25" />
+        <NodeLayout
+          Size="247,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_TextItem_ToSTGB\EST_InsertLantekProductionArchive"
+          TopLeft="52.5,211.5" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_TextItem_ToSTGB\EST_InsertTextItem"
+          TopLeft="84.5,31.5" />
+        <NodeLayout
+          Size="234,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_TextItem_ToSTGB\EST_InsertTextItemRoutingLine"
+          TopLeft="54.75,122" />
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_TextItem_ToSTGB.PrecedenceConstraints[Constraint]"
+          TopLeft="171.375,73.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.5"
+              Start="0,0"
+              End="0,41">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_TextItem_ToSTGB.PrecedenceConstraints[Constraint 1]"
+          TopLeft="173.875,164">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.5"
+              Start="0,0"
+              End="0,40">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="347,324"
+          Size="347,367"
+          Id="Package\SC_LoadDataFromNAV-LIVE_TextItem_ToSTGB"
+          TopLeft="724,53" />
+        <NodeLayout
+          Size="222,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertAddAccLedgerEntry"
+          TopLeft="13.5,5.5" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertBonusGroup"
+          TopLeft="30.5,107.5" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertBonusValue"
+          TopLeft="32,209.5" />
+        <NodeLayout
+          Size="227,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertCapacityLedgerEntry"
+          TopLeft="11,311.5" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertDataFromHR"
+          TopLeft="29,413.5" />
+        <NodeLayout
+          Size="215,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertDetCofnProdEntry"
+          TopLeft="17.0000000000001,515.5" />
+        <NodeLayout
+          Size="206,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertDimensionValue"
+          TopLeft="21.5000000000001,617.5" />
+        <NodeLayout
+          Size="238,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertFactRealTimeDeviation"
+          TopLeft="5.50000000000033,2759.5" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertGLEntry"
+          TopLeft="40,2838.33333333333" />
+        <NodeLayout
+          Size="235,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertGLItemLedgerRelation"
+          TopLeft="10.5000000000002,2921.33333333333" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertItem"
+          TopLeft="48.0000000000001,719.5" />
+        <NodeLayout
+          Size="229,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertItemApplicationEntry"
+          TopLeft="10.0000000000001,821.5" />
+        <NodeLayout
+          Size="210,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertItemLedgerEntry"
+          TopLeft="19.5000000000001,923.5" />
+        <NodeLayout
+          Size="211,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertMachineOperator"
+          TopLeft="19.0000000000001,1025.5" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertModel"
+          TopLeft="45.0000000000001,1127.5" />
+        <NodeLayout
+          Size="233,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProdOrderComponent"
+          TopLeft="8.00000000000014,1229.5" />
+        <NodeLayout
+          Size="198,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProdOrderLine"
+          TopLeft="25.5000000000002,1331.5" />
+        <NodeLayout
+          Size="234,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProdOrderRoutingLine"
+          TopLeft="7.50000000000017,1433.5" />
+        <NodeLayout
+          Size="237,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProductionBOMHeader"
+          TopLeft="6.00000000000018,1535.5" />
+        <NodeLayout
+          Size="222,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProductionBOMLine"
+          TopLeft="13.5000000000002,1637.5" />
+        <NodeLayout
+          Size="238,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProductionBOMVersion"
+          TopLeft="5.50000000000021,1739.5" />
+        <NodeLayout
+          Size="207,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertProductionOrder"
+          TopLeft="21.0000000000002,1841.5" />
+        <NodeLayout
+          Size="201,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertRoutingHeader"
+          TopLeft="24.0000000000002,1943.5" />
+        <NodeLayout
+          Size="186,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertRoutingLine"
+          TopLeft="31.5000000000002,2045.5" />
+        <NodeLayout
+          Size="202,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertRoutingVersion"
+          TopLeft="23.5000000000003,2147.5" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertSalesLine"
+          TopLeft="37.5000000000003,2249.5" />
+        <NodeLayout
+          Size="213,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertTechnologyGroup"
+          TopLeft="18.0000000000003,2351.5" />
+        <NodeLayout
+          Size="181,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertValueEntry"
+          TopLeft="34.0000000000003,2453.5" />
+        <NodeLayout
+          Size="186,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertWorkCenter"
+          TopLeft="31.5000000000003,2555.5" />
+        <NodeLayout
+          Size="215,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertWorkCenterGroup"
+          TopLeft="17.0000000000003,2657.5" />
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint]"
+          TopLeft="124.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 1]"
+          TopLeft="124.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 10]"
+          TopLeft="124.5,1067.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 11]"
+          TopLeft="124.5,1169.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 12]"
+          TopLeft="124.5,1271.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 13]"
+          TopLeft="124.5,1373.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 14]"
+          TopLeft="124.5,1475.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 15]"
+          TopLeft="124.5,1577.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 16]"
+          TopLeft="124.5,1679.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 17]"
+          TopLeft="124.5,1781.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 18]"
+          TopLeft="124.5,1883.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 19]"
+          TopLeft="124.5,2087.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 2]"
+          TopLeft="124.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 20]"
+          TopLeft="124.5,2189.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 21]"
+          TopLeft="124.5,2291.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 22]"
+          TopLeft="124.5,2393.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 23]"
+          TopLeft="124.5,2495.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 24]"
+          TopLeft="124.5,2597.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 25]"
+          TopLeft="124.5,2699.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 26]"
+          TopLeft="124.5,1985.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 27]"
+          TopLeft="124.25,2801.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.8333333333335"
+              Start="0,0"
+              End="0,29.3333333333335">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.3333333333335" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 28]"
+          TopLeft="126,2880.33333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41"
+              Start="0,0"
+              End="0,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 3]"
+          TopLeft="124.5,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 4]"
+          TopLeft="124.5,455.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 5]"
+          TopLeft="124.5,557.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 6]"
+          TopLeft="124.5,659.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 7]"
+          TopLeft="124.5,761.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 8]"
+          TopLeft="124.5,863.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 9]"
+          TopLeft="124.5,965.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="248,42"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB\EST_InsertBankAccountLedgerEntry"
+          TopLeft="13,3008" />
+        <EdgeLayout
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB.PrecedenceConstraints[Constraint 29]"
+          TopLeft="128,2963.33333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.9999999999998,44.6666666666702"
+              Start="0,0"
+              End="8.9999999999998,37.1666666666702">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.3333333333351" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.3333333333351"
+                    Point2="0,22.3333333333351"
+                    Point3="4,22.3333333333351" />
+                  <mssgle:LineSegment
+                    End="4.9999999999998,22.3333333333351" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.9999999999998,22.3333333333351"
+                    Point2="8.9999999999998,22.3333333333351"
+                    Point3="8.9999999999998,26.3333333333351" />
+                  <mssgle:LineSegment
+                    End="8.9999999999998,37.1666666666702" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="319,3105"
+          Size="319,3148"
+          Id="Package\SC_LoadDataFromNAV-LIVE_ToSTGB"
+          TopLeft="343,37.3333333333337" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="662,1611.33333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="62,-1374.83333333333"
+              Start="0,0"
+              End="54.5,-1374.83333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="27,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="27,0"
+                    Point2="31,0"
+                    Point3="31,-4" />
+                  <mssgle:LineSegment
+                    End="31,-1370.83333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31,-1370.83333333333"
+                    Point2="31,-1374.83333333333"
+                    Point3="35,-1374.83333333333" />
+                  <mssgle:LineSegment
+                    End="54.5,-1374.83333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="1071,236.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="60.25,85.25"
+              Start="0,0"
+              End="52.75,85.25">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="26.125,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="26.125,0"
+                    Point2="30.125,0"
+                    Point3="30.125,4" />
+                  <mssgle:LineSegment
+                    End="30.125,81.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="30.125,81.25"
+                    Point2="30.125,85.25"
+                    Point3="34.125,85.25" />
+                  <mssgle:LineSegment
+                    End="52.75,85.25" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
